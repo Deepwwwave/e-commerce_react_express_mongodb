@@ -1,0 +1,36 @@
+header {
+  align-items:center;
+  display: flex;
+  justify-content: center;
+  background-color: #f1f1f1;
+  color: 333
+
+}
+
+
+.logo {
+  margin-top: 10px;
+  width: 115px;
+  margin-right: 30px;
+  margin-bottom: 15px
+}
+
+h1{
+  margin-right: 50px;
+  background-color:#f1f1f1 
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .logo {
+    height: 50%;
+    width: 25%;
+    margin-bottom: 10px;
+  }
+
+  h1{
+      font-size: larger;
+      margin-left: 50px;
+  }
+}

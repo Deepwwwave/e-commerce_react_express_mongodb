@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import './App.css'
+import Header from './Components/Header/Header'
+import Navbar from './Components/Navbar/Navbar'
+import Boutique from './Containers/Boutique/Boutique'
+import Mohair from './Containers/Mohair/Mohair'
+import Ferme from './Containers/Ferme/Ferme'
+import Visite from './Containers/Visite/Visite'
+import Contact from './Containers/Contact/Contact'
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Header/> 
+     <Router basename = {process.env.PUBLIC_URL}>  
+     <Navbar/>
+      <Switch>
+
+        <Route path="/" exact component = {Boutique} />
+        <Route path="le-mohair" exact component = {Mohair} />
+        <Route path="la-ferme" exact component = {Ferme} />
+        <Route path="visite-à-la-ferme" exact component = {Visite}/>
+        <Route path="contact" exact component = {Contact}/>
+
+
+      </Switch>  
+     </Router>
+
+     
     </div>
   );
 }

@@ -1,0 +1,155 @@
+nav {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:auto;
+  background-color: #f1f1f1;
+  display:flex;
+  justify-content: space-around;
+  font-weight: 600 ;
+
+}
+
+
+
+.liste {
+  list-style-type: none;
+  background-color:  #f1f1f1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.liste a {
+  text-decoration: none;
+  color: #333;
+  
+}
+
+.items:hover{
+  text-decoration: underline;
+}
+
+.items {
+  margin-right: 90px;
+  color: #333;
+  cursor: pointer;
+}
+
+
+/* css du bouton */
+
+.btn {
+  display: none;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #f1f1f1;
+  border-radius: 50%;
+  background: #333;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+.cont-ligne {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ligne-unique {
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
+  background: #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ligne-unique::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  background: #f1f1f1;
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
+}
+
+.ligne-unique::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  background: #f1f1f1;
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
+}
+
+.cont-ligne-active {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cont-ligne-active .ligne-unique::after {
+  top: 0;
+  transform: rotate(45deg);
+  transition: top, transform 300ms;
+}
+
+.cont-ligne-active .ligne-unique {
+  background: transparent;
+}
+
+.cont-ligne-active .ligne-unique::before {
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition: bottom, transform 300ms;
+}
+
+/*Transformation du menu pour petit écran*/
+@media screen and (max-width: 500px) {
+
+   
+
+  .liste {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .items {
+    height: 50px;
+    width: 100%;
+    margin: 0 0 0 0;
+    line-height: 50px;
+    text-align: center;
+    
+  }
+
+  .items a {
+    margin-right: auto;
+    padding-left: 100%;
+  }
+
+  .btn {
+    display: block;
+    top:145px;
+  }
+}
