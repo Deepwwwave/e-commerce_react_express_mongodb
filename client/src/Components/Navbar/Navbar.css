@@ -23,6 +23,10 @@ nav {
   position: relative;
 }
 
+.ul{
+  display:flex;
+}
+
 .liste a {
   text-decoration: none;
   color: #333;
@@ -30,7 +34,9 @@ nav {
 }
 
 .items:hover{
-  text-decoration: underline;
+  
+  text-decoration: underline
+  
 }
 
 .items {
