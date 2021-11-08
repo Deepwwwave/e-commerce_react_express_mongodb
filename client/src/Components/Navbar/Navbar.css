@@ -24,12 +24,14 @@ nav {
 }
 
 .ul{
-  display:flex;
+  margin-bottom:0px;
 }
 
 .liste a {
   text-decoration: none;
   color: #333;
+  font-size: 17px;
+  font-style: bold;
   
 }
 
@@ -156,6 +158,7 @@ nav {
 
   .btn {
     display: block;
-    top:145px;
+    top:160px;
+    left: 20px;
   }
 }
