@@ -7,7 +7,6 @@ body {
   .container-boutique-menu{
     width:auto;
     margin:auto;
-    font-size: 35px;
     display: flex;
     justify-content:center;
     padding: 4vh; 
@@ -15,10 +14,10 @@ body {
   }
 
   .item {
-    border-bottom: solid 1px #48CAE4;
+    border-bottom: solid 1px #a5a5a5;
     font-size: 2vh;                        
-    margin-left: 2vh;
-    margin-right: 2vh
+    margin-left: 2.5vh;
+    margin-right: 2.5vh
   }
 
   

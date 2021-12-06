@@ -1,16 +1,12 @@
 nav {
-  position: relative;
-  top: 0;
-  left: 0;
+  position: absolute;
   width: 100%;
   height:auto;
   background-color: #f1f1f1;
   display:flex;
   justify-content: space-around;
   font-weight: 600 ;
-
 }
-
 
 
 .liste {
@@ -21,6 +17,7 @@ nav {
   justify-content: center;
   align-items: center;
   position: relative;
+  
 }
 
 .ul{
@@ -52,14 +49,14 @@ nav {
 
 .btn {
   display: none;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border: 1px solid #f1f1f1;
   border-radius: 50%;
   background: #333;
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 4px;
+  left: 8px;
   z-index: 10;
 }
 
