@@ -24,7 +24,7 @@ export default function Navbar() {
 
   return (
     <nav>
-      {(toggleMenu || largeur > 500) && (
+      {(toggleMenu || largeur > 480) && (
         <ul className="liste">
           <Link to="/">
             <li className="items">Boutique</li>

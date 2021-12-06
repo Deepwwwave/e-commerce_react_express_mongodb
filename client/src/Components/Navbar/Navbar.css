@@ -131,7 +131,7 @@ nav {
 }
 
 /*Transformation du menu pour petit écran*/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
 
    
 
