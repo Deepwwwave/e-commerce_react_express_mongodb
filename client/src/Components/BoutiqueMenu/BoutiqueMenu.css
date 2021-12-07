@@ -45,12 +45,13 @@ body {
       justify-content: center;
       flex-wrap: wrap;
       align-items: center;
-      gap: 2vh; 
-      font-size: 3vh;
+      gap:2vh; 
+      
     }
 
     .item {
-      margin: 1.5vh;
+      margin: 10px;
+      font-size: 13px;
       } 
       
     }
