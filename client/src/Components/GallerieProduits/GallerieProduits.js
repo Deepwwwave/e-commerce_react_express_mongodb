@@ -1,9 +1,28 @@
 import React from "react";
 import "./GallerieProduits.css";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import { fetchProducts } from "../../redux/products/productsReducer";
+import { v4 as uuidv4 } from "uuid";
+
 
 export default function GallerieProduits() {
+
+  
+    const { products } = useSelector((state) => ({
+      ...state.productsReducer,
+    }));
+  
+    const dispatch = useDispatch(); // A revoir
+  
+    useEffect(() => {
+      if (products.length === 0) {
+        dispatch(fetchProducts());
+      }
+    }, []);
+
   return (
-    <div>
+    <>
       <div class="gallerie">
         <div class="container-produit">
           <div class="container-image-produit">
@@ -60,6 +79,7 @@ export default function GallerieProduits() {
           </div>
         </div>
       </div>
-    </div>
-  );
-}
+    </>
+  )
+  }
+

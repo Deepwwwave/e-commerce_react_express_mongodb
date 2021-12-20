@@ -33,8 +33,9 @@ nav {
 }
 
 .items:hover{
-  
+  color: #15505a;
   text-decoration: underline
+
   
 }
 
