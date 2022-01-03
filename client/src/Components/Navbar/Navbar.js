@@ -6,9 +6,10 @@ export default function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [largeur, setLargeur] = useState(window.innerWidth);
 
-  const ChangeToggleMenu = () => {
+  const changeToggleMenu = () => {
     setToggleMenu(!toggleMenu);
   };
+
 
   useEffect(() => {
     const changeWidth = () => {
@@ -27,24 +28,24 @@ export default function Navbar() {
       {(toggleMenu || largeur > 480) && (
         <ul className="liste">
           <Link to="/">
-            <li className="items" onClick={ChangeToggleMenu}>Boutique</li>
+            <li className="items" onClick={changeToggleMenu}>Boutique</li>
           </Link>
           <Link to="le-mohair">
-            <li className="items" onClick={ChangeToggleMenu}>Le Mohair</li>
+            <li className="items" onClick={changeToggleMenu}>Le Mohair</li>
           </Link>
           <Link to="la-ferme">
-            <li className="items" onClick={ChangeToggleMenu}>La Ferme</li>
+            <li className="items" onClick={changeToggleMenu}>La Ferme</li>
           </Link>
           <Link to="visite-à-la-ferme">
-            <li className="items" onClick={ChangeToggleMenu}>Visite à la ferme</li>
+            <li className="items" onClick={changeToggleMenu}>Visite à la ferme</li>
           </Link>
           <Link to="contact">
-            <li className="items" onClick={ChangeToggleMenu}>Contact</li>
+            <li className="items" onClick={changeToggleMenu}>Contact</li>
           </Link>
         </ul>
       )}
 
-      <div onClick={ChangeToggleMenu} className="btn">
+      <div onClick={changeToggleMenu} className="btn">
         <div className={toggleMenu ?'cont-ligne-active': 'cont-ligne'}>
           <div class="ligne-unique"></div>
         </div>

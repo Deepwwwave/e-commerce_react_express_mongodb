@@ -1,4 +1,4 @@
-import {getProducts} from "../../service/index"
+import getProducts from "../../service/index";
 
 const INITIAL_STATE = {
   products: [],
@@ -19,20 +19,29 @@ function productsReducer(state = INITIAL_STATE, action) {
 }
 export default productsReducer;
 
-
-
 // Networking - MongoDB
 
-export const fetchProducts = () => {
-  return async function (dispatch) {
-    getProducts()
-    .then(response => response.json())
-    .then(data => {
-      dispatch({
-          type:'LOADARTICLES',
-          payload: data
-      })
-  })
-  .then(console.log(getProducts().data))
-  }
+// export const fetchProducts = () => {
+//   return async function (dispatch) {
+//     getProducts()
+//       .then((response) => response.json)
+//       .then((data) => {
+//         dispatch({
+//           type: "LOADPRODUCTS",
+//           playload: data,
+//         });
+//       })
+//       .then(console.log(getProducts().data));
+//   };
+// };
+
+export const fetchProducts = () => dispatch => {
+  fetch(getProducts())
+  .then(response => response.json())
+  .then(data => {
+    dispatch({
+        type:'LOADARTICLES',
+        payload: data
+    })
+})
 }

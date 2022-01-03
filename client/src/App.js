@@ -8,6 +8,7 @@ import Mohair from './Containers/Mohair/Mohair'
 import Ferme from './Containers/Ferme/Ferme'
 import Visite from './Containers/Visite/Visite'
 import Contact from './Containers/Contact/Contact'
+import ScrollToTop from "react-scroll-to-top";
 
 
 
@@ -28,7 +29,7 @@ function App() {
 
       </Switch>  
      </Router>
-
+     <ScrollToTop smooth left/>
      
     </div>
   );
