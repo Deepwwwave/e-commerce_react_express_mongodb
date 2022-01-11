@@ -5,7 +5,7 @@ const cors = require("cors");
 const { json } = require("body-parser");
 const app = express();
 const routes = express.Router();
-app.use('/',routes);
+app.use('/api',routes);
  
 // body-parser
 routes.use(bodyParser.urlencoded({ extended: false }));
@@ -50,22 +50,6 @@ client.connect((err) => {
       .catch((err) => res.send(error));
   });
 
-  const exempleObj = {
-    "id": 19999,
-    "category": "Clothes",
-    "name": "Winter Jacket for women, All sizes",
-    "price": 899
-  };
-
-  routes.post("/products/add",jsonParser, function (req, res) {
-    products
-      .insertOne(req.body)
-      .then(() => res.status(200).send(`successfully inserted new document`))
-      .catch((err) => {
-        console.log(err);
-        res.send(err);
-      })
-  })
 });
 
 // routes
