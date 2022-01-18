@@ -21,6 +21,8 @@ export default function GallerieProduits() {
       }
     }, []);
 
+    console.log(products)
+
   return (
     <>
       <div class="gallerie">

@@ -1,4 +1,4 @@
-import getProducts from "../../service/index";
+import {getProducts} from "../../service/index";
 
 const INITIAL_STATE = {
   products: [],
@@ -10,7 +10,7 @@ function productsReducer(state = INITIAL_STATE, action) {
     case "LOADPRODUCTS": {
       return {
         ...state,
-        products: action.payload,
+        products: action.payload
       };
     }
   }
@@ -19,29 +19,35 @@ function productsReducer(state = INITIAL_STATE, action) {
 }
 export default productsReducer;
 
-// Networking - MongoDB
+//Networking - MongoDB
+
+export const fetchProducts = () => {
+  return function (dispatch) {
+    getProducts()
+      .then((response) => response.data)
+      .then((data) => {
+        dispatch({
+          type: "LOADPRODUCTS",
+          playload: data,
+        });
+        console.log(data);
+      })
+      
+  };
+};
 
 // export const fetchProducts = () => {
 //   return async function (dispatch) {
 //     getProducts()
-//       .then((response) => response.json)
-//       .then((data) => {
-//         dispatch({
-//           type: "LOADPRODUCTS",
-//           playload: data,
-//         });
+//     .then(response => response)
+//     .then(data => {
+//       dispatch({
+//           type:'LOADPRODUCTS',
+//           payload: data
 //       })
-//       .then(console.log(getProducts().data));
-//   };
-// };
+//       console.log(data)
+//   })}
+  
+// }
 
-export const fetchProducts = () => dispatch => {
-  fetch(getProducts())
-  .then(response => response.json())
-  .then(data => {
-    dispatch({
-        type:'LOADARTICLES',
-        payload: data
-    })
-})
-}
+console.log(productsReducer.data) 

@@ -1,16 +1,18 @@
 import axios from "axios";
 
-const getProducts = () => {
+export const getProducts = () => {
   return new Promise((onSuccess, onFail) => {
     axios
-    .get("/api/products")
+    .get("api/products")
     .then((response, error) => {
       if (!response || error) {
         return onFail(`Response failure : ${error}`);
       }
       onSuccess(response);
+      console.log(response)
     });
+    
   });
+  
 };
 
-export default getProducts
