@@ -24,7 +24,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className= {toggleMenu && 'menu-transtion'}>
+    <nav className= {toggleMenu && "menu-transtion"}>
       {(toggleMenu || largeur > 480) && (
         <ul className="liste">
           <Link to="/">
@@ -46,8 +46,8 @@ export default function Navbar() {
       )}
 
       <div onClick={changeToggleMenu} className="btn">
-        <div className={toggleMenu ?'cont-ligne-active': 'cont-ligne'}>
-          <div class="ligne-unique"></div>
+        <div className={toggleMenu ?"cont-ligne-active": "cont-ligne"}>
+          <div className="ligne-unique"></div>
         </div>
       </div>
     </nav>

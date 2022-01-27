@@ -1,5 +1,4 @@
 
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import './App.css'
 import Header from './Components/Header/Header'
 import Navbar from './Components/Navbar/Navbar'
@@ -9,12 +8,13 @@ import Ferme from './Containers/Ferme/Ferme'
 import Visite from './Containers/Visite/Visite'
 import Contact from './Containers/Contact/Contact'
 import ScrollToTop from "react-scroll-to-top";
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 
 
 function App() {
   return (
-    <div className="App">
+    <>
      <Header/> 
      <Router basename = {process.env.PUBLIC_URL}>  
      <Navbar/>
@@ -31,7 +31,7 @@ function App() {
      </Router>
      <ScrollToTop smooth left/>
      
-    </div>
+    </>
   );
 }
 

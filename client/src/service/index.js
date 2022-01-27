@@ -8,10 +8,10 @@ export const getProducts = () => {
       if (!response || error) {
         return onFail(`Response failure : ${error}`);
       }
-      onSuccess(response);
-      console.log(response)
-    });
+      return onSuccess(response)
+    })
     
+      
   });
   
 };
