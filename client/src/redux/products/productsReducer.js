@@ -35,8 +35,6 @@ export const fetchProducts = () => (dispatch) => {
       });
 };
 
-
-
 // export const fetchProducts = () => {
 //   return function (dispatch) {
 //     getProducts()
@@ -49,3 +47,5 @@ export const fetchProducts = () => (dispatch) => {
 //       });
 //   };
 // };
+
+//lklklklkklklklkk
