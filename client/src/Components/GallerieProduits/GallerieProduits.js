@@ -1,7 +1,7 @@
 import React from "react";
 import "./GallerieProduits.css";
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { fetchProducts } from "../../redux/products/productsReducer";
 import { v4 as uuidv4 } from "uuid";
 
