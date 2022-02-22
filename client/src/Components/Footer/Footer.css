@@ -1,0 +1,16 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  background: rgb(27, 27, 27);
+  color: rgb(255, 255, 255);
+  margin-top: 30%;
+  padding-top:40px;
+}
+
+.mentions-legales b {
+    text-decoration: underline;
+}
+
+.adresse-footer{
+    margin-top:0px;
+}

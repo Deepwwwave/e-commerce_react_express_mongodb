@@ -2,6 +2,7 @@
 import './App.css'
 import Header from './Components/Header/Header'
 import Navbar from './Components/Navbar/Navbar'
+import Footer from './Components/Footer/Footer'
 import Boutique from './Containers/Boutique/Boutique'
 import Mohair from './Containers/Mohair/Mohair'
 import Ferme from './Containers/Ferme/Ferme'
@@ -29,6 +30,7 @@ function App() {
 
       </Switch>  
      </Router>
+     <Footer/>
      <ScrollToTop smooth left/>
      
     </>

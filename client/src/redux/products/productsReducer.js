@@ -61,6 +61,12 @@ function productsReducer(state = INITIAL_STATE, action) {
         products: action.playload,
       };
     }
+    case "REMOVEPRODUCTS": {
+      return {
+        ...state,
+        products: action.playload,
+      };
+    }
   }
 
   return state;
@@ -218,10 +224,10 @@ export const fetchPelote = () => (dispatch) => {
     });
 };
 
-export const remooveProducts = () => (dispatch) => {
+export const removeProducts = () => (dispatch) => {
   let tab = [];
   dispatch({
-    type: "REMOOVEPRODUCTS",
+    type: "REMOVEPRODUCTS",
     playload: tab,
   });
 };

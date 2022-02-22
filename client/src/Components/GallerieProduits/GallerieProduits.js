@@ -9,7 +9,7 @@ export default function GallerieProduits() {
   const { products } = useSelector((state) => ({
     ...state.productsReducer,
   }));
-  const dispatch = useDispatch(); // A revoir
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (products.length === 0) {
@@ -31,7 +31,7 @@ export default function GallerieProduits() {
               </div>
               <div className="description-produit">
                 <h2 className="titre-produit">{item.name}</h2>
-                <p>{item.price}</p>
+                <p className="prix">{item.price}</p>
               </div>
             </div>
           );
