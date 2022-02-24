@@ -1,16 +1,46 @@
 footer {
-  display: flex;
-  justify-content: space-around;
   background: rgb(27, 27, 27);
   color: rgb(255, 255, 255);
   margin-top: 30%;
   padding-top:40px;
+  padding-bottom: 40px;
 }
 
-.mentions-legales b {
-    text-decoration: underline;
+.contact-footer {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+
+
+.mentions-style {
+  color: white;
+  text-decoration: none;
+  
 }
 
 .adresse-footer{
     margin-top:0px;
+    text-align: center;
+}
+
+.map{
+  display: flex;
+  justify-content: start;
+  margin-left: 200px;
+  margin-top: 30px;
+}
+
+.copyright{
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  footer {
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    padding-left:10px;
+  }
 }

@@ -1,0 +1,10 @@
+.CGV{
+    text-align: left;
+    margin: 160px 80px 40px 80px;
+    padding: 80px 40px 40px 40px;
+    border: 1px solid ;
+}
+
+.CGV a {
+    color:black;
+}

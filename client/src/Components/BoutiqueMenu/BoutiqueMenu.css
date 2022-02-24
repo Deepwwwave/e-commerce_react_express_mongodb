@@ -17,7 +17,8 @@ body {
     border-bottom: solid 1px #a5a5a5;
     font-size: 2vh;                        
     margin-left: 2.5vh;
-    margin-right: 2.5vh
+    margin-right: 2.5vh;
+    cursor: pointer;
   }
 
   
