@@ -1,6 +1,10 @@
 import React from "react";
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 
+const {REACT_APP_MAP_API_KEY} = process.env;
+
+
+
 const containerStyle = {
   width: "375px",
   height: "250px",
@@ -13,7 +17,7 @@ const center = {
 
 function CustomMap() {
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: "AIzaSyCQut2WrR3La-nyLFNi5m6f22WiITImoCA",
+    googleMapsApiKey: REACT_APP_MAP_API_KEY
   });
 
   const onLoad = (marker) => {
