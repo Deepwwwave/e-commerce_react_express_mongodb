@@ -4,6 +4,7 @@ import PanierLogo from '../../Components/Panier/PanierLogo'
 import GallerieProduits from '../../Components/GallerieProduits/GallerieProduits'
 
 export default function Boutique() {
+
     return (
         <div>
             <PanierLogo/>

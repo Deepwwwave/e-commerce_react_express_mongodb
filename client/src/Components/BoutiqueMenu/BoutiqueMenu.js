@@ -1,9 +1,13 @@
 import "./BoutiqueMenu.css";
 import { useDispatch } from "react-redux";
-import { fetchBonnet, fetchTourDeCou, fetchPull, fetchGant, fetchChaussette, fetchChausson, fetchPlaide, fetchPelote } from "../../redux/products/productsReducer";
+import { fetchProducts, fetchBonnet, fetchTourDeCou, fetchPull, fetchGant, fetchChaussette, fetchChausson, fetchPlaide, fetchPelote } from "../../redux/products/productsReducer";
 
 export default function BoutiqueMenu() {
   const dispatch = useDispatch();
+
+  const afficheToutLesArticles = () => {
+    dispatch(fetchProducts());
+  };
 
   const afficheBonnet = () => {
     dispatch(fetchBonnet());
@@ -39,6 +43,9 @@ export default function BoutiqueMenu() {
 
   return (
     <div className="container-boutique-menu">
+      <div className="item" onClick={afficheToutLesArticles}>
+        Tout les articles
+      </div>
       <div className="item" onClick={afficheBonnet}>
         Bonnet
       </div>

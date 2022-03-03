@@ -8,3 +8,10 @@
 .CGV a {
     color:black;
 }
+
+@media screen and (max-width: 500px) {
+    .CGV {
+        padding: 80px 20px 40px 20px;
+        margin: 160px 10px 40px 10px;
+      }
+}
