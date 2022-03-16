@@ -3,6 +3,7 @@ import "./GallerieProduits.css";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchProducts } from "../../redux/products/productsReducer";
+import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
 export default function GallerieProduits() {
@@ -25,15 +26,17 @@ export default function GallerieProduits() {
       <div className="gallerie">
         {products.map((item) => {
           return (
-            <div className="container-produit" key={uuidv4()}>
-              <div className="container-image-produit">
-                <img src="mohair4.jpeg" alt="" class="image-produit" />
+            <Link to="/détail-de-l'article">
+              <div className="container-produit" key={uuidv4()}>
+                <div className="container-image-produit">
+                  <img src="mohair4.jpeg" alt="" class="image-produit" />
+                </div>
+                <div className="description-produit">
+                  <h2 className="titre-produit">{item.name}</h2>
+                  <p className="prix">{item.price}</p>
+                </div>
               </div>
-              <div className="description-produit">
-                <h2 className="titre-produit">{item.name}</h2>
-                <p className="prix">{item.price}</p>
-              </div>
-            </div>
+            </Link>
           );
         })}
       </div>

@@ -5,9 +5,11 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    
   }
   
+  a{
+    text-decoration:none;
+  }
   
   .container-produit {
     margin: 20px;
@@ -34,10 +36,12 @@
   .titre-produit{
     font-weight: normal;
     font-size: 1.75vh;
+    color: black
     
   }
   .prix{
     font-weight:bold;
+    color: black
   }
   
   @media screen and (max-width: 375px) {

@@ -3,6 +3,7 @@ import Header from "./Components/Header/Header";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Boutique from "./Containers/Boutique/Boutique";
+import ProductDetail from "./Containers/ProductDetail/ProductDetail"
 import Mohair from "./Containers/Mohair/Mohair";
 import Ferme from "./Containers/Ferme/Ferme";
 import Visite from "./Containers/Visite/Visite";
@@ -20,6 +21,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/" exact component={Boutique} />
+          <Route path="/détail-de-l'article" exact component={ProductDetail}/>
           <Route path="/le-mohair" exact component={Mohair} />
           <Route path="/la-ferme" exact component={Ferme} />
           <Route path="/visite-à-la-ferme" exact component={Visite} />
