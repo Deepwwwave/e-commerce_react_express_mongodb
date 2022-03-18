@@ -19,6 +19,7 @@ h1 {
   margin-right: 50px;
   font-size: 60px;
   color: rgb(27, 34, 98);
+  font-family: Cookie, cursive;
 }
 
 @media screen and (max-width: 500px) {

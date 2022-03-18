@@ -1,9 +1,10 @@
 import "./App.css";
 import Header from "./Components/Header/Header";
 import Navbar from "./Components/Navbar/Navbar";
+import PanierLogo from './Components/PanierLogo/PanierLogo'
 import Footer from "./Components/Footer/Footer";
 import Boutique from "./Containers/Boutique/Boutique";
-import ProductDetail from "./Containers/ProductDetail/ProductDetail"
+import ProductDetail from "./Containers/ProductDetail/ProductDetail";
 import Mohair from "./Containers/Mohair/Mohair";
 import Ferme from "./Containers/Ferme/Ferme";
 import Visite from "./Containers/Visite/Visite";
@@ -19,6 +20,7 @@ function App() {
       <Header />
       <Router basename={process.env.PUBLIC_URL}>
         <Navbar />
+        <PanierLogo />
         <Switch>
           <Route path="/" exact component={Boutique} />
           <Route path="/le-mohair" exact component={Mohair} />
@@ -27,7 +29,11 @@ function App() {
           <Route path="/contact" exact component={Contact} />
           <Route path="/Mentions-légales" exact component={MentionsLegales} />
           <Route path="/CGV" exact component={CGV} />
-          <Route path="/détail-de-l'article/:slug" exact component={ProductDetail}/>
+          <Route
+            path="/détail-de-l'article/:slug"
+            exact
+            component={ProductDetail}
+          />
         </Switch>
         <Footer />
       </Router>

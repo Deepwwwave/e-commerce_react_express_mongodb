@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import "./ProductDetail.css";
 
 export default function ProductDetail() {
@@ -25,11 +25,16 @@ export default function ProductDetail() {
             and scrambled it to make a type specimen book.
           </p>
 
-          <input value={1} type="number" />
-          <a class="btn btn-dark" href="#">
-            Add to Cart
-          </a>
+          <div className="container-form-detail-produit">
+            <input value={1} type="number" />
+            <Link>
+              <btn className="btn-ajouter-au-pannier">Ajouter au panier</btn>
+            </Link>
+          </div>
         </div>
+      </div>
+      <div className="notice">
+        * Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil alias blanditiis, ipsam officia impedit eveniet, dolore suscipit dolorum quas nemo reiciendis optio! Similique fugit laborum, numquam saepe quidem qui omnis.
       </div>
     </div>
   );
