@@ -21,13 +21,13 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/" exact component={Boutique} />
-          <Route path="/détail-de-l'article" exact component={ProductDetail}/>
           <Route path="/le-mohair" exact component={Mohair} />
           <Route path="/la-ferme" exact component={Ferme} />
           <Route path="/visite-à-la-ferme" exact component={Visite} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/Mentions-légales" exact component={MentionsLegales} />
           <Route path="/CGV" exact component={CGV} />
+          <Route path="/détail-de-l'article/:slug" exact component={ProductDetail}/>
         </Switch>
         <Footer />
       </Router>

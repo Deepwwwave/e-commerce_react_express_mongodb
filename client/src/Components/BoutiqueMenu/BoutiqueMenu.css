@@ -14,11 +14,16 @@ body {
   }
 
   .item {
-    border-bottom: solid 1px #a5a5a5;
+    color: #15505A;
     font-size: 2vh;                        
     margin-left: 2.5vh;
     margin-right: 2.5vh;
     cursor: pointer;
+    border-bottom:1px solid #a5a5a5;
+  }
+
+  .item:hover {
+    color:black
   }
 
   

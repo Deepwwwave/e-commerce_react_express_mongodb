@@ -1,16 +1,36 @@
-import React from 'react'
-
+import React from "react";
+import { useLocation } from "react-router-dom";
+import "./ProductDetail.css";
 
 export default function ProductDetail() {
-
-
+  const location = useLocation();
+  console.log(location);
 
   return (
-    <div class="container-detail-product">
+    <div className="container-product-detail">
+      <div className="container-zoom-product">
         <div id="img-container">
-				<div id="lens"></div>
-				<img id="featured" src='#'/>
-			</div>
+          <div id="lens"></div>
+          <img src="/mohair4.jpeg" alt="" id="featured" />
+        </div>
+        <div className="description">
+          <h2>{location.state.name}</h2>
+          <hr />
+          <h3>{location.state.price}</h3>
+
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+
+          <input value={1} type="number" />
+          <a class="btn btn-dark" href="#">
+            Add to Cart
+          </a>
+        </div>
+      </div>
     </div>
-  )
+  );
 }

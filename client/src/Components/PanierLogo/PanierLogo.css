@@ -8,11 +8,15 @@
   width: 725px;
   align-items: flex-end;
   flex-direction: column;
+  cursor:pointer;
 }
+
+
 
 .panier-incr {
   width: 17px;
-  background-color: black;
+  background-color: #15505A;
+  border:1px solid black;
   border-radius: 50%;
   color: white;
   text-align: center;

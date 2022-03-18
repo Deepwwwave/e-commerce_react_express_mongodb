@@ -2,7 +2,6 @@ nav {
   position: absolute;
   width: 100%;
   height: auto;
-  background-color: #f1f1f1;
   display: flex;
   justify-content: space-around;
   font-weight: 600;
@@ -10,7 +9,9 @@ nav {
 
 .liste {
   list-style-type: none;
-  background-color: #f1f1f1;
+  border-bottom: 1px solid #a5a5a5;
+  padding-bottom: 20px;
+  padding-top: 20px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -25,12 +26,12 @@ nav {
 .liste a {
   text-decoration: none;
   color: #333;
-  font-size: 17px;
+  font-size: 19px;
   font-style: bold;
 }
 
 .items:hover {
-  color: #15505a;
+  color: #6d1539;
 }
 
 .items {
@@ -124,11 +125,16 @@ nav {
 
 /*Transformation du menu pour petit écran*/
 @media screen and (max-width: 480px) {
+  nav {
+    background-color: #f1f1f1;
+  }
+
   .liste {
     flex-direction: column;
     text-align: center;
     justify-content: center;
     padding: 0px 0px 0px 0px;
+    background-color: #f1f1f1;
   }
 
   .items {
@@ -137,6 +143,7 @@ nav {
     margin: 0 0 0 0;
     line-height: 50px;
     text-align: center;
+    background-color: #f1f1f1;
   }
 
   .items a {

@@ -26,17 +26,27 @@ export default function GallerieProduits() {
       <div className="gallerie">
         {products.map((item) => {
           return (
-            <Link to="/détail-de-l'article">
-              <div className="container-produit" key={uuidv4()}>
+            <div className="container-produit" key={uuidv4()}>
+              <Link
+                to={{
+                  pathname: `détail-de-l'article/${item.name
+                    .replace(/\s+/g, "-")
+                    .trim()}`,
+                  state: {
+                    name: item.name,
+                    price: item.price,
+                  },
+                }}
+              >
                 <div className="container-image-produit">
-                  <img src="mohair4.jpeg" alt="" class="image-produit" />
+                  <img src='mohair4.jpeg' alt="" class="image-produit" />
                 </div>
                 <div className="description-produit">
                   <h2 className="titre-produit">{item.name}</h2>
                   <p className="prix">{item.price}</p>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
           );
         })}
       </div>

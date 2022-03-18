@@ -30,16 +30,16 @@ export default function Navbar() {
           <Link to="/">
             <li className="items" onClick={changeToggleMenu}>Boutique</li>
           </Link>
-          <Link to="le-mohair">
+          <Link to="/le-mohair">
             <li className="items" onClick={changeToggleMenu}>Le Mohair</li>
           </Link>
-          <Link to="la-ferme">
+          <Link to="/la-ferme">
             <li className="items" onClick={changeToggleMenu}>La Ferme</li>
           </Link>
-          <Link to="visite-à-la-ferme">
+          <Link to="/visite-à-la-ferme">
             <li className="items" onClick={changeToggleMenu}>Visite à la ferme</li>
           </Link>
-          <Link to="contact">
+          <Link to="/contact">
             <li className="items" onClick={changeToggleMenu}>Contact</li>
           </Link>
         </ul>
