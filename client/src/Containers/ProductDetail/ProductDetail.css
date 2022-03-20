@@ -35,10 +35,46 @@
 .container-form-detail-produit {
   display: flex;
   margin-top: 50px;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+
+.container-nbre-product {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nbre-product-moins{
+  margin-right: 10px;
+  color: white;
+  background-color: black;
+  padding: 5px;
+  border-radius: 40%
+}
+
+.nbre-product{
+  padding: 5px;
+}
+
+.nbre-product-plus{
+  margin-left: 10px;
+  color: white;
+  background-color: black;
+  padding: 5px;
+  border-radius: 40%
 }
 
 .btn-ajouter-au-pannier {
   background-color: black;
+  color: white;
+  border-radius: 5%;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.btn-voir-le-pannier {
+  background-color: #15505A;
   color: white;
   border-radius: 5%;
   padding: 5px;

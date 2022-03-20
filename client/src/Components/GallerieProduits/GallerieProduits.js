@@ -39,11 +39,11 @@ export default function GallerieProduits() {
                 }}
               >
                 <div className="container-image-produit">
-                  <img src='mohair4.jpeg' alt="" class="image-produit" />
+                  <img src="mohair4.jpeg" alt="" class="image-produit" />
                 </div>
                 <div className="description-produit">
                   <h2 className="titre-produit">{item.name}</h2>
-                  <p className="prix">{item.price}</p>
+                  <p className="prix">{item.price} €</p>
                 </div>
               </Link>
             </div>
