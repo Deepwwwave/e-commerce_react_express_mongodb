@@ -1,8 +1,9 @@
-import React from "react";
+import {React , useState} from "react";
+
 
 export default function Panier() {
 
-    const [nbreProduct, setNbreProduct] = useState(1);
+    const [nbreProduct, setNbreProduct] = useState();
 
     const nbreProductplus = () => {
       setNbreProduct(nbreProduct+1);
