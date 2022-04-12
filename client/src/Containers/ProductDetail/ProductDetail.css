@@ -50,7 +50,8 @@
   color: white;
   background-color: black;
   padding: 5px;
-  border-radius: 40%
+  border-radius: 40%;
+  cursor: pointer
 }
 
 .nbre-product{
@@ -62,7 +63,8 @@
   color: white;
   background-color: black;
   padding: 5px;
-  border-radius: 40%
+  border-radius: 40%;
+  cursor: pointer
 }
 
 .btn-ajouter-au-pannier {
@@ -71,6 +73,7 @@
   border-radius: 5%;
   padding: 5px;
   margin-left: 20px;
+  cursor: pointer
 }
 
 .btn-voir-le-pannier {
@@ -79,6 +82,7 @@
   border-radius: 5%;
   padding: 5px;
   margin-left: 100px;
+  cursor: pointer
 }
 
 .notice{

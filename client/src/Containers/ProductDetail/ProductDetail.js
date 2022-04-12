@@ -138,14 +138,14 @@ export default function ProductDetail() {
               <btn className="nbre-product-moins" onClick={nbreProductmoins}>
                 <b>-</b>
               </btn>
-              <div className="nbre-product">{nbreProduct}</div>
+              <input className="nbre-product"value={nbreProduct} size="1" disabled/>
               <btn className="nbre-product-plus" onClick={nbreProductplus}>
                 <b>+</b>
               </btn>
             </div>
             <btn className="btn-ajouter-au-pannier">Ajouter au panier</btn>
 
-            <Link>
+            <Link to>
               <btn className="btn-voir-le-pannier">Voir le panier</btn>
             </Link>
           </div>
