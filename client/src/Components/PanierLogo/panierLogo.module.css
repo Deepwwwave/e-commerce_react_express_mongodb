@@ -1,0 +1,35 @@
+
+
+
+.containerPanierIncr {
+  display:flex;
+  margin: auto;
+  margin-top: 130px;
+  width: 725px;
+  align-items: flex-end;
+  flex-direction: column;
+  cursor:pointer;
+}
+
+
+.panierIncr {
+  width: 17px;
+  background-color: #15505A;
+  border:1px solid black;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  
+}
+      
+  @media screen and (max-width:480px){
+    .containerPanierIncr {
+      width: 250px;
+    }
+
+  }
+  @media screen and (min-width:480px) and (max-width:1024px){
+    .containerPanierIncr {
+      width: 400px;
+    }
+  }

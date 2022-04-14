@@ -1,0 +1,56 @@
+body {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.boutiqueMenu {
+  width: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 4vh;
+  list-style-type: none;
+}
+
+.item {
+  color: #15505a;
+  font-size: 2vh;
+  margin-left: 2.5vh;
+  margin-right: 2.5vh;
+  cursor: pointer;
+  border-bottom: 1px solid #a5a5a5;
+}
+
+.item:hover {
+  color: black;
+}
+
+@media screen and (max-width: 480px) {
+  .boutiqueMenu {
+    width: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2vh;
+    font-size: 3vh;
+  }
+
+  .item {
+    margin: 1.5vh;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+  .boutiqueMenu {
+    width: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2vh;
+  }
+
+  .item {
+    margin: 10px;
+    font-size: 13px;
+  }
+}

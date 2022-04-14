@@ -59,34 +59,34 @@ client.connect((err) => {
 });
 
 
-// Stripe
-const stripe = require("stripe")(process.env.PRIVATE_API_KEY_STRIPE);
+// // Stripe
+// const stripe = require("stripe")(process.env.PRIVATE_API_KEY_STRIPE);
 
-routes.post("/create-checkout-session", jsonParser, async (req, res) => {
-  try {
-    const session = await stripe.checkout.sessions.create({
-      line_items: [
-        {
-          price_data: {
-            currency: 'eur',
-            product_data: {
-              name: 'T-shirt',
-            },
-            unit_amount: 2000,
-          },
-          quantity: 1,
-        },
-      ],
-      mode: "payment",
-      success_url: `http://localhost:${process.env.PORT_FRONT}?success=true`,
-      cancel_url: `http://localhost:${process.env.PORT_FRONT}?canceled=true`,
-    });
+// routes.post("/create-checkout-session", jsonParser, async (req, res) => {
+//   try {
+//     const session = await stripe.checkout.sessions.create({
+//       line_items: [
+//         {
+//           price_data: {
+//             currency: 'eur',
+//             product_data: {
+//               name: 'T-shirt',
+//             },
+//             unit_amount: 2000,
+//           },
+//           quantity: 1,
+//         },
+//       ],
+//       mode: "payment",
+//       success_url: `http://localhost:${process.env.PORT_FRONT}?success=true`,
+//       cancel_url: `http://localhost:${process.env.PORT_FRONT}?canceled=true`,
+//     });
 
-    res.json({ id: session.id });
-  } catch (err) {
-    return res.status(500).send(`faild to process payment ${err}`);
-  }
-});
+//     res.json({ id: session.id });
+//   } catch (err) {
+//     return res.status(500).send(`faild to process payment ${err}`);
+//   }
+// });
 
 // routes
 routes.get("/", (req, res) => {

@@ -1,0 +1,61 @@
+footer {
+  background: rgb(27, 27, 27);
+  color: rgb(255, 255, 255);
+  margin-top: 10%;
+  padding-top:20px;
+  padding-bottom: 20px;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+
+
+.mentionStyle {
+  color: white;
+  text-decoration: none;
+  
+}
+
+.adresse{
+    margin-top:0px;
+    text-align: center;
+}
+
+.map{
+  display: flex;
+  justify-content: start;
+  margin-left: 200px;
+  margin-top: 30px;
+}
+
+.copyright{
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+  
+  }
+
+  .map{
+    display: flex;
+    justify-content: start;
+    margin-left: 20px;
+    width:300px; 
+}
+
+.copyright{
+  text-align: left;
+  margin-left: 20px;
+  margin-top:60px;
+}
+
+}
